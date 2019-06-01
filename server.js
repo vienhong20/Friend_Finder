@@ -8,12 +8,12 @@ const app = express();
 const PORT = process.env.PORT || 8080;
 
 //link to html and api routes
-require("./app/routing/apiRoutes")(app);
-require("./app/routing/htmlRoutes")(app);
+const apiRoutes = require("./app/routing/apiRoutes.js");
+const htmlRoutes = require("./app/routing/htmlRoutes.js");
 
-/*//server routing map
+//server routing map
 apiRoutes(app); //API route - must be first due to the html default
-htmlRoutes(app); //HTML route*/
+htmlRoutes(app); //HTML route
 
 //set up the Express app to handle data parsing
 app.use(bodyParser.json());

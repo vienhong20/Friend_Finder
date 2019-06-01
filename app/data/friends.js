@@ -36,4 +36,4 @@ let friends = [
 ];
 
 // export the array
-module.exports = friends;
+module.exports = friendsData;
