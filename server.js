@@ -13,7 +13,7 @@ const htmlRoutes = require("./app/routing/htmlRoutes.js");
 
 //server routing map
 apiRoutes(app); //API route - must be first due to the html default
-htmlRoutes(app); //HTML route
+htmlRoutes(app); //HTML route*/
 
 //set up the Express app to handle data parsing
 app.use(bodyParser.json());
@@ -23,5 +23,5 @@ app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
 //listener - start the server
 app.listen(PORT => {
-  console.log("App listening on PORT:" + PORT);
+  console.log("App listening on PORT: " + PORT);
 });
