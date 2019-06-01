@@ -1,7 +1,7 @@
 console.log("API Route Connected Successfully");
 
 //link to friends data
-const friendsData = require("./data/friends.js");
+const friendsData = require("../data/friends");
 
 // api routes
 function apiRoutes(app) {
