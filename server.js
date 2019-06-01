@@ -5,13 +5,13 @@ const path = require("path");
 
 //set up Express app
 const app = express();
-const PORT = process.env.PORT || 8888;
+const PORT = process.env.PORT || 8080;
 
 //link to html and api routes
-const apiRoutes = require("./app/routing/apiRoutes.js");
-const htmlRoutes = require("./app/routing/htmlRoutes.js");
+require("./app/routing/apiRoutes")(app);
+require("./app/routing/htmlRoutes")(app);
 
-//server routing map
+/*//server routing map
 apiRoutes(app); //API route - must be first due to the html default
 htmlRoutes(app); //HTML route*/
 
@@ -20,6 +20,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
+
+app.use("/static", express.static(path.join(__dirname, "app/public")));
 
 //listener - start the server
 app.listen(PORT => {
