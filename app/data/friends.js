@@ -1,4 +1,4 @@
-let friends = [
+let friendsData = [
   {
     name: "Ross Geller",
     photo:
@@ -35,5 +35,5 @@ let friends = [
   }
 ];
 
-// export the array
-module.exports = friends;
+// export to thr API
+module.exports = friendsData;
