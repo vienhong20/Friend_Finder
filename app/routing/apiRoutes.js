@@ -6,11 +6,11 @@ const friendsData = require("../data/friends");
 // api routes
 function apiRoutes(app) {
   // a GET route
-  app.get("/api/friends", function(req, res) {
+  app.get("app/data/friends.js", function(req, res) {
     res.json(friendsData);
   });
   //a POST route
-  app.post("/api/friends", function(req, res) {
+  app.post("app/data/friends.js", function(req, res) {
     let newFriend = {
       name: req.body.name,
       photo: req.body.photo,

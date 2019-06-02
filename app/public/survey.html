@@ -361,7 +361,9 @@
             newFriend.scores = scoresArray;
             // POST the newFriend to the friends.js file and get back the best match
             var currentURL = window.location.origin;
-            $.post(currentURL + "/api/friends", newFriend, function(data) {
+            $.post(currentURL + "app/data/friends.js", newFriend, function(
+              data
+            ) {
               // Add Best Match attributes to Modal
               $("#matchName").text(data.name);
               $("#matchImg").attr("src", data.photo);
