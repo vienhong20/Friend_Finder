@@ -7,7 +7,7 @@ Friend Finder application is meant to simulate a simple dating app. The applicat
 
 <h3>Demo</h3>
 Friend Finder is deployed to Heroku. Please check it out here.
-https://git.heroku.com/friend-finder-v01.git
+https://friend-finder-v01.herokuapp.com/
 
 <h3>Installation</h3>
 To install the application follow the instructions below:
